@@ -6,6 +6,7 @@ Developed kakao-talk login using passport
 
 ## HOW TO RUN
 1. You have to enter the contents below first.
+
 (1) [kakao.Strategy.ts]
 - clientID: '',           // restAPI key
 - clientSecret: '',       // client secret
