@@ -8,16 +8,16 @@ Developed kakao-talk login using passport
 1. You have to enter the contents below first.
 
 (1) [kakao.Strategy.ts]
-- clientID: '',           // restAPI key
-- clientSecret: '',       // client secret
-- callbackURL: '',        // redirect url
+- clientID >> restAPI key
+- clientSecret >> client secret
+- callbackURL >> redirect url
 
 (2) [app.module.ts]
-- type: 'mysql',
-- host: '',               // your SQL  host URL
-- port: 3306,             // post number
-- username: '',           // host ID
-- password: '',           // host PW
+- type >> mysql
+- host >> your SQL  host URL
+- port >> post number
+- username >> host ID
+- password >> host PW
 
 
 2. The terminal commands >> npm i
