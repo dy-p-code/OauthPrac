@@ -19,6 +19,8 @@ Developed kakao-talk login using passport
 - username: '',           // host ID
 - password: '',           // host PW
 
+
 2. The terminal commands >> npm i
+
 
 3. The terminal commands >> npm run test:dev
