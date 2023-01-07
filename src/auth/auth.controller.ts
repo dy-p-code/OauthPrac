@@ -15,7 +15,7 @@ export class AuthController {
   @Get('/login/kakao/redirect')
   @UseGuards(KakaoAuthGuard)
   handleRedirect(@Param('code') code: string) {
-    console.log(code);
+    // console.log(code);
     return { msg: 'OK' };
   }
 

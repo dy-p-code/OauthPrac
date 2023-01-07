@@ -1,4 +1,6 @@
-login URL http://localhost:3000/api/users/kakao/
+## login URL
+
+http://localhost:3000/api/users/login/kakao
 
 ## COMPLETE
 
@@ -7,25 +9,21 @@ Developed kakao-talk login using passport
 
 ## HOW TO RUN
 
-1. You have to enter the contents below first.
+1. You have create a .env file and write the contents below.
 
-(1) [kakao.Strategy.ts]
+DB_HOST = host endpoint
+DB_PORT = port number
+DB_USERNAME = user name
+DB_PASSWORD = user passport
+DB_NAME = DB name
+CLIENT_ID = restAPI key
+SECRET_KEY = client secret
 
-- clientID >> restAPI key
-- clientSecret >> client secret
-- callbackURL >> redirect url
+2. You must set a redirect url.
 
-(2) [app.module.ts]
+3. The terminal commands >> npm i
 
-- type >> mysql
-- host >> your SQL host URL
-- port >> post number
-- username >> host ID
-- password >> host PW
-
-2. The terminal commands >> npm i
-
-3. The terminal commands >> npm run test:dev
+4. The terminal commands >> npm run test:dev
 
 ## CHECKLIST
 

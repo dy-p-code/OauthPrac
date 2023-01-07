@@ -2,15 +2,15 @@ import { Inject, Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-kakao-oauth2';
 import { AuthService } from '../auth.service';
-
+import { ConfigModule } from '@nestjs/config';
 @Injectable()
 export class KakaoStrategy extends PassportStrategy(Strategy) {
   constructor(
     @Inject('AUTH_SERVICE') private readonly authService: AuthService,
   ) {
     super({
-      clientID: 'process.env.CLIENT_ID', // restAPI key
-      clientSecret: 'process.env.SECRET_KEY', // client secret
+      clientID: process.env.CLIENT_ID, // restAPI key
+      clientSecret: process.env.SECRET_KEY, // client secret
       callbackURL: '/api/users/login/kakao/redirect', // redirect url
       // scope: ['profile_nickname', 'account_email'],
     });

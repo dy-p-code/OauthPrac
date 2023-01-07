@@ -1,6 +1,7 @@
+.note
 .env
-.env.dev
-.env.Test
+.env.development
+.env.production
 
 # compiled output
 /dist

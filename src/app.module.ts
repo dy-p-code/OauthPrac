@@ -8,18 +8,23 @@ import { User } from './typeorm/entities/User';
 import { UserController } from './user/user.controller';
 import { UserService } from './user/user.service';
 import { UserModule } from './user/user.module';
+import { ConfigModule } from '@nestjs/config';
 
 // mysal >> create database "database_name";
+
 @Module({
   imports: [
     AuthModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'process.env.HOST', // Do not Upload
-      port: 3306,
-      username: 'process.env.USER_NAME', // Do not Upload
-      password: 'process.env.USER_PW', // Do not Upload
-      database: 'users',
+      host: process.env.DB_HOST, // Do not Upload
+      port: parseInt(process.env.DB_PORT),
+      username: process.env.DB_USERNAME, // Do not Upload
+      password: process.env.DB_PASSWORD, // Do not Upload
+      database: process.env.DB_NAME,
       entities: [User],
       synchronize: true,
     }),
