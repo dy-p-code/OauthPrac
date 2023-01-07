@@ -1,6 +1,6 @@
 ## login URL
 
-http://localhost:3000/api/users/login/kakao
+http://54.180.145.61:3000/api/users/login/kakao/redirect
 
 ## COMPLETE
 
