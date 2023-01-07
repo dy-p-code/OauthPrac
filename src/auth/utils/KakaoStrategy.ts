@@ -11,7 +11,7 @@ export class KakaoStrategy extends PassportStrategy(Strategy) {
     super({
       clientID: process.env.CLIENT_ID, // restAPI key
       clientSecret: process.env.SECRET_KEY, // client secret
-      callbackURL: '/api/users/login/kakao/redirect', // redirect url
+      callbackURL: process.env.CALLBACK, // redirect url
       // scope: ['profile_nickname', 'account_email'],
     });
   }
