@@ -1,6 +1,6 @@
 ## login URL
 
-http://54.180.145.61:3000/api/users/login/kakao/redirect
+http://localhost:3000/api/users/login/kakao/redirect
 
 ## COMPLETE
 
@@ -21,9 +21,11 @@ SECRET_KEY = client secret
 
 2. You must set a redirect url.
 
-3. The terminal commands >> npm i
+3. You must create a database
 
-4. The terminal commands >> npm run test:dev
+4. The terminal commands >> npm i
+
+5. The terminal commands >> npm run test:dev
 
 ## CHECKLIST
 

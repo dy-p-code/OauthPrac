@@ -13,7 +13,7 @@ export class AuthService {
   async validateUser(details: UserDetails) {
     // console.log(details);
     const user = await this.userRepository.findOneBy({
-      account_email: details.account_email,
+      email: details.email,
     });
     // console.log(user);
     if (user) return user;

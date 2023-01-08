@@ -1,6 +1,8 @@
 export type UserDetails = {
-  profile_nickname: string;
-  account_email: string;
+  id: number;
+  nickname: string;
+  email: string;
+  profileImg: string;
 };
 
 // export interface profile {

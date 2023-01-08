@@ -1,15 +1,14 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { NotFoundError } from 'rxjs';
 import { User } from 'src/typeorm/entities/User';
 
 @Injectable()
 export class UserService {
   private users: User[] = [];
 
-  getOne(id: number): User {
-    const user = this.users.find((user) => user.id === id);
+  findById(userId: number): User {
+    const user = this.users.find((user) => user.userId === userId);
     if (!user) {
-      throw new NotFoundException(`아이디를 찾을 수 없습니다.`);
+      throw new NotFoundException(`회원 인증에 실패했습니다.`);
     }
     return user;
   }
